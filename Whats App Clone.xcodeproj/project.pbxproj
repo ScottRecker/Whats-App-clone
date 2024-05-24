@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */; };
-		D2CA7D542C004E370080E71F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7D532C004E370080E71F /* ContentView.swift */; };
 		D2CA7D562C004E390080E71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D552C004E390080E71F /* Assets.xcassets */; };
 		D2CA7D592C004E390080E71F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D582C004E390080E71F /* Preview Assets.xcassets */; };
+		D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7E052C0057F60080E71F /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D2CA7D4E2C004E370080E71F /* Whats App Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whats App Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whats_App_CloneApp.swift; sourceTree = "<group>"; };
-		D2CA7D532C004E370080E71F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D2CA7D552C004E390080E71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2CA7D582C004E390080E71F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2CA7E052C0057F60080E71F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */,
-				D2CA7D532C004E370080E71F /* ContentView.swift */,
+				D2CA7E052C0057F60080E71F /* MainTabView.swift */,
 				D2CA7D552C004E390080E71F /* Assets.xcassets */,
 				D2CA7D572C004E390080E71F /* Preview Content */,
 			);
@@ -137,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2CA7D542C004E370080E71F /* ContentView.swift in Sources */,
 				D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */,
+				D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
