@@ -1,0 +1,19 @@
+{
+	"name": "xcode build server",
+	"version": "0.2",
+	"bspVersion": "2.0",
+	"languages": [
+		"c",
+		"cpp",
+		"objective-c",
+		"objective-cpp",
+		"swift"
+	],
+	"argv": [
+		"/opt/homebrew/bin/xcode-build-server"
+	],
+	"workspace": "/Users/scott/Tutorials/Whats App Clone/Whats App Clone.xcodeproj/project.xcworkspace",
+	"build_root": "/Users/scott/Library/Developer/Xcode/DerivedData/Whats_App_Clone-bhnudlzlwdjwaibeugcswmnzvcpz",
+	"scheme": "Whats App Clone",
+	"kind": "xcode"
+}
