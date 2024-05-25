@@ -10,6 +10,9 @@
 		D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280632C02485A004DEB55 /* CommunityTabScreen.swift */; };
 		D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */; };
 		D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806B2C02544F004DEB55 /* ChannelItemView.swift */; };
+		D242806E2C02595E004DEB55 /* SettingsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806D2C02595E004DEB55 /* SettingsTabScreen.swift */; };
+		D24280702C025A08004DEB55 /* SettingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806F2C025A08004DEB55 /* SettingsItemView.swift */; };
+		D24280732C025C35004DEB55 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280722C025C35004DEB55 /* SettingsItem.swift */; };
 		D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */; };
 		D2CA7D562C004E390080E71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D552C004E390080E71F /* Assets.xcassets */; };
 		D2CA7D592C004E390080E71F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D582C004E390080E71F /* Preview Assets.xcassets */; };
@@ -22,6 +25,9 @@
 		D24280632C02485A004DEB55 /* CommunityTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTabScreen.swift; sourceTree = "<group>"; };
 		D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabScreen.swift; sourceTree = "<group>"; };
 		D242806B2C02544F004DEB55 /* ChannelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItemView.swift; sourceTree = "<group>"; };
+		D242806D2C02595E004DEB55 /* SettingsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabScreen.swift; sourceTree = "<group>"; };
+		D242806F2C025A08004DEB55 /* SettingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemView.swift; sourceTree = "<group>"; };
+		D24280722C025C35004DEB55 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		D2CA7D4E2C004E370080E71F /* Whats App Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whats App Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whats_App_CloneApp.swift; sourceTree = "<group>"; };
 		D2CA7D552C004E390080E71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 		D24280652C024865004DEB55 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				D24280712C025C1A004DEB55 /* Models */,
 				D24280682C024888004DEB55 /* Views */,
 			);
 			path = Settings;
@@ -130,8 +137,18 @@
 		D24280682C024888004DEB55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D242806D2C02595E004DEB55 /* SettingsTabScreen.swift */,
+				D242806F2C025A08004DEB55 /* SettingsItemView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D24280712C025C1A004DEB55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D24280722C025C35004DEB55 /* SettingsItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D2CA7D452C004E370080E71F = {
@@ -242,11 +259,14 @@
 			files = (
 				D2CA7E082C0116630080E71F /* UpdatesTabScreen.swift in Sources */,
 				D2CA7E0C2C0168BE0080E71F /* CallsTabScreen.swift in Sources */,
+				D242806E2C02595E004DEB55 /* SettingsTabScreen.swift in Sources */,
 				D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */,
 				D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */,
 				D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */,
+				D24280702C025A08004DEB55 /* SettingsItemView.swift in Sources */,
 				D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */,
 				D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */,
+				D24280732C025C35004DEB55 /* SettingsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +408,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +438,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
