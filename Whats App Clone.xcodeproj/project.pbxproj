@@ -36,6 +36,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D242805C2C0247A3004DEB55 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D24280662C024871004DEB55 /* Chats */,
+				D24280652C024865004DEB55 /* Settings */,
+				D24280612C024828004DEB55 /* Communties */,
+				D242805F2C0247EB004DEB55 /* Calls */,
+				D242805D2C0247B3004DEB55 /* Updates */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D242805D2C0247B3004DEB55 /* Updates */ = {
+			isa = PBXGroup;
+			children = (
+				D242805E2C0247D4004DEB55 /* Views */,
+			);
+			path = Updates;
+			sourceTree = "<group>";
+		};
+		D242805E2C0247D4004DEB55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2CA7E072C0116630080E71F /* UpdatesTabScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D242805F2C0247EB004DEB55 /* Calls */ = {
+			isa = PBXGroup;
+			children = (
+				D24280602C0247F3004DEB55 /* Views */,
+			);
+			path = Calls;
+			sourceTree = "<group>";
+		};
+		D24280602C0247F3004DEB55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2CA7E0B2C0168BE0080E71F /* CallsTabScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D24280612C024828004DEB55 /* Communties */ = {
+			isa = PBXGroup;
+			children = (
+				D24280622C024835004DEB55 /* Views */,
+			);
+			path = Communties;
+			sourceTree = "<group>";
+		};
+		D24280622C024835004DEB55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D24280632C02485A004DEB55 /* CommunityTabScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D24280652C024865004DEB55 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D24280682C024888004DEB55 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D24280662C024871004DEB55 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				D24280672C02487A004DEB55 /* Views */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		D24280672C02487A004DEB55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D24280682C024888004DEB55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D2CA7D452C004E370080E71F = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +145,9 @@
 		D2CA7D502C004E370080E71F /* Whats App Clone */ = {
 			isa = PBXGroup;
 			children = (
+				D242805C2C0247A3004DEB55 /* Screens */,
 				D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */,
 				D2CA7E052C0057F60080E71F /* MainTabView.swift */,
-				D2CA7E072C0116630080E71F /* UpdatesTabScreen.swift */,
-				D2CA7E0B2C0168BE0080E71F /* CallsTabScreen.swift */,
 				D2CA7D552C004E390080E71F /* Assets.xcassets */,
 				D2CA7D572C004E390080E71F /* Preview Content */,
 			);
