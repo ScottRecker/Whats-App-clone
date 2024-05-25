@@ -12,6 +12,7 @@
 		D2CA7D592C004E390080E71F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D582C004E390080E71F /* Preview Assets.xcassets */; };
 		D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7E052C0057F60080E71F /* MainTabView.swift */; };
 		D2CA7E082C0116630080E71F /* UpdatesTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7E072C0116630080E71F /* UpdatesTabScreen.swift */; };
+		D2CA7E0C2C0168BE0080E71F /* CallsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7E0B2C0168BE0080E71F /* CallsTabScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		D2CA7D582C004E390080E71F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2CA7E052C0057F60080E71F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		D2CA7E072C0116630080E71F /* UpdatesTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTabScreen.swift; sourceTree = "<group>"; };
+		D2CA7E0B2C0168BE0080E71F /* CallsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsTabScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */,
 				D2CA7E052C0057F60080E71F /* MainTabView.swift */,
 				D2CA7E072C0116630080E71F /* UpdatesTabScreen.swift */,
+				D2CA7E0B2C0168BE0080E71F /* CallsTabScreen.swift */,
 				D2CA7D552C004E390080E71F /* Assets.xcassets */,
 				D2CA7D572C004E390080E71F /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CA7E082C0116630080E71F /* UpdatesTabScreen.swift in Sources */,
+				D2CA7E0C2C0168BE0080E71F /* CallsTabScreen.swift in Sources */,
 				D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */,
 				D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */,
 			);
