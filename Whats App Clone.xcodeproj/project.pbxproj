@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280632C02485A004DEB55 /* CommunityTabScreen.swift */; };
+		D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */; };
+		D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806B2C02544F004DEB55 /* ChannelItemView.swift */; };
 		D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */; };
 		D2CA7D562C004E390080E71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D552C004E390080E71F /* Assets.xcassets */; };
 		D2CA7D592C004E390080E71F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D582C004E390080E71F /* Preview Assets.xcassets */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		D24280632C02485A004DEB55 /* CommunityTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTabScreen.swift; sourceTree = "<group>"; };
+		D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabScreen.swift; sourceTree = "<group>"; };
+		D242806B2C02544F004DEB55 /* ChannelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItemView.swift; sourceTree = "<group>"; };
 		D2CA7D4E2C004E370080E71F /* Whats App Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whats App Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whats_App_CloneApp.swift; sourceTree = "<group>"; };
 		D2CA7D552C004E390080E71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,7 +45,7 @@
 		D242805C2C0247A3004DEB55 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D24280662C024871004DEB55 /* Chats */,
+				D24280662C024871004DEB55 /* Channel */,
 				D24280652C024865004DEB55 /* Settings */,
 				D24280612C024828004DEB55 /* Communties */,
 				D242805F2C0247EB004DEB55 /* Calls */,
@@ -106,17 +110,19 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		D24280662C024871004DEB55 /* Chats */ = {
+		D24280662C024871004DEB55 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
 				D24280672C02487A004DEB55 /* Views */,
 			);
-			path = Chats;
+			path = Channel;
 			sourceTree = "<group>";
 		};
 		D24280672C02487A004DEB55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */,
+				D242806B2C02544F004DEB55 /* ChannelItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,7 +243,9 @@
 				D2CA7E082C0116630080E71F /* UpdatesTabScreen.swift in Sources */,
 				D2CA7E0C2C0168BE0080E71F /* CallsTabScreen.swift in Sources */,
 				D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */,
+				D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */,
 				D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */,
+				D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */,
 				D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
