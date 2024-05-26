@@ -14,7 +14,11 @@ struct ChannelTabScreen: View {
             List {
                 archivedButton()
                 ForEach(0..<3) { _ in
-                    ChannelItemView()
+                    NavigationLink {
+                        ChatRoomScreen()
+                    } label: {
+                        ChannelItemView()
+                    }
                 }
                 inboxFooterView()
                     .listRowSeparator(.hidden)

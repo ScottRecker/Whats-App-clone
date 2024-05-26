@@ -13,6 +13,8 @@
 		D242806E2C02595E004DEB55 /* SettingsTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806D2C02595E004DEB55 /* SettingsTabScreen.swift */; };
 		D24280702C025A08004DEB55 /* SettingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806F2C025A08004DEB55 /* SettingsItemView.swift */; };
 		D24280732C025C35004DEB55 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280722C025C35004DEB55 /* SettingsItem.swift */; };
+		D24280772C02D698004DEB55 /* ChatRoomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280762C02D698004DEB55 /* ChatRoomScreen.swift */; };
+		D24280792C02D8EB004DEB55 /* TextInputAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280782C02D8EB004DEB55 /* TextInputAreaView.swift */; };
 		D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */; };
 		D2CA7D562C004E390080E71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D552C004E390080E71F /* Assets.xcassets */; };
 		D2CA7D592C004E390080E71F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA7D582C004E390080E71F /* Preview Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		D242806D2C02595E004DEB55 /* SettingsTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabScreen.swift; sourceTree = "<group>"; };
 		D242806F2C025A08004DEB55 /* SettingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemView.swift; sourceTree = "<group>"; };
 		D24280722C025C35004DEB55 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		D24280762C02D698004DEB55 /* ChatRoomScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomScreen.swift; sourceTree = "<group>"; };
+		D24280782C02D8EB004DEB55 /* TextInputAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputAreaView.swift; sourceTree = "<group>"; };
 		D2CA7D4E2C004E370080E71F /* Whats App Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whats App Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA7D512C004E370080E71F /* Whats_App_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whats_App_CloneApp.swift; sourceTree = "<group>"; };
 		D2CA7D552C004E390080E71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 		D242805C2C0247A3004DEB55 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D24280742C02D676004DEB55 /* Chat */,
 				D24280662C024871004DEB55 /* Channel */,
 				D24280652C024865004DEB55 /* Settings */,
 				D24280612C024828004DEB55 /* Communties */,
@@ -149,6 +154,23 @@
 				D24280722C025C35004DEB55 /* SettingsItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D24280742C02D676004DEB55 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				D24280752C02D67D004DEB55 /* Views */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		D24280752C02D67D004DEB55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D24280762C02D698004DEB55 /* ChatRoomScreen.swift */,
+				D24280782C02D8EB004DEB55 /* TextInputAreaView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D2CA7D452C004E370080E71F = {
@@ -263,10 +285,12 @@
 				D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */,
 				D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */,
 				D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */,
+				D24280772C02D698004DEB55 /* ChatRoomScreen.swift in Sources */,
 				D24280702C025A08004DEB55 /* SettingsItemView.swift in Sources */,
 				D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */,
 				D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */,
 				D24280732C025C35004DEB55 /* SettingsItem.swift in Sources */,
+				D24280792C02D8EB004DEB55 /* TextInputAreaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
