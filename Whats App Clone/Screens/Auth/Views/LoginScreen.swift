@@ -52,7 +52,7 @@ struct LoginScreen: View {
 
     private func signUpButton() -> some View {
         NavigationLink {
-            Text("SIGN UP View placeholder")
+           SignUpScreen(authScreenModel: authScreenModel)
         } label: {
             HStack {
                 Image(systemName: "sparkles")
