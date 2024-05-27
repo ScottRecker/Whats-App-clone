@@ -15,6 +15,10 @@
 		D20ED0962C04E4E6007F4D8A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D20ED0952C04E4E6007F4D8A /* FirebaseMessaging */; };
 		D20ED0982C04E4E6007F4D8A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D20ED0972C04E4E6007F4D8A /* FirebaseStorage */; };
 		D20ED09A2C04E737007F4D8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D20ED0992C04E737007F4D8A /* GoogleService-Info.plist */; };
+		D20ED09E2C04EAF4007F4D8A /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED09D2C04EAF4007F4D8A /* LoginScreen.swift */; };
+		D20ED0A02C04EB8E007F4D8A /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED09F2C04EB8E007F4D8A /* AuthHeaderView.swift */; };
+		D20ED0A22C04EC80007F4D8A /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0A12C04EC80007F4D8A /* AuthTextField.swift */; };
+		D20ED0A42C04F25B007F4D8A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0A32C04F25B007F4D8A /* AuthButton.swift */; };
 		D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280632C02485A004DEB55 /* CommunityTabScreen.swift */; };
 		D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */; };
 		D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806B2C02544F004DEB55 /* ChannelItemView.swift */; };
@@ -41,6 +45,10 @@
 		D20ED08A2C03C161007F4D8A /* BubbleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleImageView.swift; sourceTree = "<group>"; };
 		D20ED08C2C04136D007F4D8A /* BubbleAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAudioView.swift; sourceTree = "<group>"; };
 		D20ED0992C04E737007F4D8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D20ED09D2C04EAF4007F4D8A /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		D20ED09F2C04EB8E007F4D8A /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		D20ED0A12C04EC80007F4D8A /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		D20ED0A32C04F25B007F4D8A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		D24280632C02485A004DEB55 /* CommunityTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTabScreen.swift; sourceTree = "<group>"; };
 		D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabScreen.swift; sourceTree = "<group>"; };
 		D242806B2C02544F004DEB55 /* ChannelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItemView.swift; sourceTree = "<group>"; };
@@ -80,9 +88,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20ED09B2C04EADD007F4D8A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D20ED09C2C04EAE4007F4D8A /* Views */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D20ED09C2C04EAE4007F4D8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D20ED09D2C04EAF4007F4D8A /* LoginScreen.swift */,
+				D20ED09F2C04EB8E007F4D8A /* AuthHeaderView.swift */,
+				D20ED0A12C04EC80007F4D8A /* AuthTextField.swift */,
+				D20ED0A32C04F25B007F4D8A /* AuthButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D242805C2C0247A3004DEB55 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D20ED09B2C04EADD007F4D8A /* Auth */,
 				D24280742C02D676004DEB55 /* Chat */,
 				D24280662C024871004DEB55 /* Channel */,
 				D24280652C024865004DEB55 /* Settings */,
@@ -344,8 +372,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CA7E082C0116630080E71F /* UpdatesTabScreen.swift in Sources */,
+				D20ED0A42C04F25B007F4D8A /* AuthButton.swift in Sources */,
 				D2CA7E0C2C0168BE0080E71F /* CallsTabScreen.swift in Sources */,
 				D24280842C03AC2F004DEB55 /* BubbleTailView.swift in Sources */,
+				D20ED0A02C04EB8E007F4D8A /* AuthHeaderView.swift in Sources */,
 				D242806E2C02595E004DEB55 /* SettingsTabScreen.swift in Sources */,
 				D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */,
 				D242807B2C039F43004DEB55 /* MessageListController.swift in Sources */,
@@ -354,8 +384,10 @@
 				D2CA7D522C004E370080E71F /* Whats_App_CloneApp.swift in Sources */,
 				D20ED08B2C03C161007F4D8A /* BubbleImageView.swift in Sources */,
 				D24280772C02D698004DEB55 /* ChatRoomScreen.swift in Sources */,
+				D20ED09E2C04EAF4007F4D8A /* LoginScreen.swift in Sources */,
 				D24280702C025A08004DEB55 /* SettingsItemView.swift in Sources */,
 				D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */,
+				D20ED0A22C04EC80007F4D8A /* AuthTextField.swift in Sources */,
 				D24280822C03ABB5004DEB55 /* BubbleTextView.swift in Sources */,
 				D24280802C03AB1A004DEB55 /* MessageItem.swift in Sources */,
 				D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */,
