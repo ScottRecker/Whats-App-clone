@@ -20,8 +20,6 @@ struct AuthTextField: View {
             switch type {
             case .password:
                 SecureField(type.placeholder, text: $text)
-                    .keyboardType(type.keyboardType)
-                    .disableAutocorrection(true)
             default:
                 TextField(type.placeholder, text: $text)
                     .keyboardType(type.keyboardType)

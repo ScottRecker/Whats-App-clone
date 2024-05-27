@@ -19,6 +19,7 @@
 		D20ED0A02C04EB8E007F4D8A /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED09F2C04EB8E007F4D8A /* AuthHeaderView.swift */; };
 		D20ED0A22C04EC80007F4D8A /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0A12C04EC80007F4D8A /* AuthTextField.swift */; };
 		D20ED0A42C04F25B007F4D8A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0A32C04F25B007F4D8A /* AuthButton.swift */; };
+		D20ED0A92C051C40007F4D8A /* AuthScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0A82C051C40007F4D8A /* AuthScreenModel.swift */; };
 		D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280632C02485A004DEB55 /* CommunityTabScreen.swift */; };
 		D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */; };
 		D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806B2C02544F004DEB55 /* ChannelItemView.swift */; };
@@ -49,6 +50,7 @@
 		D20ED09F2C04EB8E007F4D8A /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		D20ED0A12C04EC80007F4D8A /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		D20ED0A32C04F25B007F4D8A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		D20ED0A82C051C40007F4D8A /* AuthScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenModel.swift; sourceTree = "<group>"; };
 		D24280632C02485A004DEB55 /* CommunityTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTabScreen.swift; sourceTree = "<group>"; };
 		D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabScreen.swift; sourceTree = "<group>"; };
 		D242806B2C02544F004DEB55 /* ChannelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItemView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		D20ED09B2C04EADD007F4D8A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				D20ED0A72C051C24007F4D8A /* ViewModels */,
 				D20ED09C2C04EAE4007F4D8A /* Views */,
 			);
 			path = Auth;
@@ -105,6 +108,14 @@
 				D20ED0A32C04F25B007F4D8A /* AuthButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D20ED0A72C051C24007F4D8A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D20ED0A82C051C40007F4D8A /* AuthScreenModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D242805C2C0247A3004DEB55 /* Screens */ = {
@@ -372,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CA7E082C0116630080E71F /* UpdatesTabScreen.swift in Sources */,
+				D20ED0A92C051C40007F4D8A /* AuthScreenModel.swift in Sources */,
 				D20ED0A42C04F25B007F4D8A /* AuthButton.swift in Sources */,
 				D2CA7E0C2C0168BE0080E71F /* CallsTabScreen.swift in Sources */,
 				D24280842C03AC2F004DEB55 /* BubbleTailView.swift in Sources */,
