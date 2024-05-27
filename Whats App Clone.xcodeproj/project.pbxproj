@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D20ED08B2C03C161007F4D8A /* BubbleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED08A2C03C161007F4D8A /* BubbleImageView.swift */; };
+		D20ED08D2C04136D007F4D8A /* BubbleAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED08C2C04136D007F4D8A /* BubbleAudioView.swift */; };
 		D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280632C02485A004DEB55 /* CommunityTabScreen.swift */; };
 		D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */; };
 		D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806B2C02544F004DEB55 /* ChannelItemView.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		D20ED08A2C03C161007F4D8A /* BubbleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleImageView.swift; sourceTree = "<group>"; };
+		D20ED08C2C04136D007F4D8A /* BubbleAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAudioView.swift; sourceTree = "<group>"; };
 		D24280632C02485A004DEB55 /* CommunityTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTabScreen.swift; sourceTree = "<group>"; };
 		D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabScreen.swift; sourceTree = "<group>"; };
 		D242806B2C02544F004DEB55 /* ChannelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItemView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				D242807C2C03A1EF004DEB55 /* MessageListView.swift */,
 				D24280812C03ABB5004DEB55 /* BubbleTextView.swift */,
 				D24280832C03AC2F004DEB55 /* BubbleTailView.swift */,
+				D20ED08C2C04136D007F4D8A /* BubbleAudioView.swift */,
 				D20ED08A2C03C161007F4D8A /* BubbleImageView.swift */,
 			);
 			path = Views;
@@ -333,6 +336,7 @@
 				D24280802C03AB1A004DEB55 /* MessageItem.swift in Sources */,
 				D2CA7E062C0057F60080E71F /* MainTabView.swift in Sources */,
 				D24280872C03B1BE004DEB55 /* CustomModifiers.swift in Sources */,
+				D20ED08D2C04136D007F4D8A /* BubbleAudioView.swift in Sources */,
 				D24280732C025C35004DEB55 /* SettingsItem.swift in Sources */,
 				D24280792C02D8EB004DEB55 /* TextInputAreaView.swift in Sources */,
 			);
