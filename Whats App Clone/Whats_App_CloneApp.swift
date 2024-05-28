@@ -23,8 +23,7 @@ struct Whats_App_CloneApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            MainTabView()
-            LoginScreen()
+            RootScreen()
         }
     }
 }
