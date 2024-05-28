@@ -21,6 +21,7 @@
 		D20ED0A42C04F25B007F4D8A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0A32C04F25B007F4D8A /* AuthButton.swift */; };
 		D20ED0A62C05181C007F4D8A /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0A52C05181C007F4D8A /* SignUpScreen.swift */; };
 		D20ED0A92C051C40007F4D8A /* AuthScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0A82C051C40007F4D8A /* AuthScreenModel.swift */; };
+		D20ED0AC2C052AC5007F4D8A /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ED0AB2C052AC5007F4D8A /* AuthProvider.swift */; };
 		D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280632C02485A004DEB55 /* CommunityTabScreen.swift */; };
 		D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */; };
 		D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242806B2C02544F004DEB55 /* ChannelItemView.swift */; };
@@ -53,6 +54,7 @@
 		D20ED0A32C04F25B007F4D8A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		D20ED0A52C05181C007F4D8A /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		D20ED0A82C051C40007F4D8A /* AuthScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenModel.swift; sourceTree = "<group>"; };
+		D20ED0AB2C052AC5007F4D8A /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		D24280632C02485A004DEB55 /* CommunityTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTabScreen.swift; sourceTree = "<group>"; };
 		D24280692C024DDA004DEB55 /* ChannelTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabScreen.swift; sourceTree = "<group>"; };
 		D242806B2C02544F004DEB55 /* ChannelItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItemView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		D20ED09B2C04EADD007F4D8A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				D20ED0AA2C052AAA007F4D8A /* Services */,
 				D20ED0A72C051C24007F4D8A /* ViewModels */,
 				D20ED09C2C04EAE4007F4D8A /* Views */,
 			);
@@ -119,6 +122,14 @@
 				D20ED0A82C051C40007F4D8A /* AuthScreenModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D20ED0AA2C052AAA007F4D8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D20ED0AB2C052AC5007F4D8A /* AuthProvider.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D242805C2C0247A3004DEB55 /* Screens */ = {
@@ -391,6 +402,7 @@
 				D2CA7E0C2C0168BE0080E71F /* CallsTabScreen.swift in Sources */,
 				D24280842C03AC2F004DEB55 /* BubbleTailView.swift in Sources */,
 				D20ED0A02C04EB8E007F4D8A /* AuthHeaderView.swift in Sources */,
+				D20ED0AC2C052AC5007F4D8A /* AuthProvider.swift in Sources */,
 				D242806E2C02595E004DEB55 /* SettingsTabScreen.swift in Sources */,
 				D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */,
 				D242807B2C039F43004DEB55 /* MessageListController.swift in Sources */,
