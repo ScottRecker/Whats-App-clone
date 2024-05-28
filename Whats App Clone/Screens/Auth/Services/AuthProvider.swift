@@ -77,17 +77,22 @@ final class AuthManager: AuthProvider {
     }
 
     func logOut() async throws {
-
+        do {
+            try Auth.auth().signOut()
+            authState.send(.loggedOut)
+            print("🔐 Successfully logged out!")
+        } catch {
+            print("🔐 Failed to logout current user: \(error.localizedDescription)")
+        }
     }
-    
 
 }
 
 extension AuthManager {
     private func saveUserInfoDatabase(user: UserItem) async throws {
         do {
-            let userDictionary = ["uid": user.uid, "username": user.username, "email": user.email]
-            try await Database.database().reference().child("users").child(user.uid).setValue(userDictionary)
+            let userDictionary: [String: Any] = [.uid: user.uid, .username: user.username, .email: user.email]
+            try await FirebaseConstants.UserRef.child(user.uid).setValue(userDictionary)
         } catch {
             print("🔐 Failed to Save Created user info to Database: \(error.localizedDescription)")
             throw AuthError.failedToSaveUserInfo(error.localizedDescription)
@@ -96,7 +101,7 @@ extension AuthManager {
     
     private func fetchCurrentUserInfo() {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
-        Database.database().reference().child("users").child(currentUid).observe(.value) {[weak self] snapshot in
+        FirebaseConstants.UserRef.child(currentUid).observe(.value) {[weak self] snapshot in
             guard let userDict = snapshot.value as? [String: Any] else { return }
             let loggedInUser = UserItem(dictionary: userDict)
             self?.authState.send(.loggedIn(loggedInUser))
