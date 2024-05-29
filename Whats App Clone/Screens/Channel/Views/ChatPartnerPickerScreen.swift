@@ -28,7 +28,11 @@ struct ChatPartnerPickerScreen: View {
                         .bold()
                 }
             }
-            .searchable(text: $searchText, prompt: "Search name or number")
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "Search name or number"
+            )
             .navigationTitle("New Chat")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
