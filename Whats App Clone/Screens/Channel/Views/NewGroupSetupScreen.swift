@@ -27,7 +27,10 @@ struct NewGroupSetupScreen: View {
                     viewModel.handItemSelection(item)
                 }
             } header: {
-                Text("Participants: 12/12")
+                let count = viewModel.selectedChatPartners.count
+                let maxCount = ChannelConstats.maxGroupParcitipants
+
+                Text("Participants: \(count) of \(maxCount)")
                     .bold()
             }
             .listRowBackground(Color.clear)
