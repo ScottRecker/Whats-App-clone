@@ -36,6 +36,8 @@
 		D24280822C03ABB5004DEB55 /* BubbleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280812C03ABB5004DEB55 /* BubbleTextView.swift */; };
 		D24280842C03AC2F004DEB55 /* BubbleTailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280832C03AC2F004DEB55 /* BubbleTailView.swift */; };
 		D24280872C03B1BE004DEB55 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280862C03B1BE004DEB55 /* CustomModifiers.swift */; };
+		D28C90302C08F6F300E2597C /* ChannelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C902F2C08F6F300E2597C /* ChannelItem.swift */; };
+		D28C90322C08FE4700E2597C /* ChannelTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */; };
 		D2AA30A32C065B1400BC5F1C /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA30A22C065B1400BC5F1C /* RootScreen.swift */; };
 		D2AA30A62C065B5500BC5F1C /* RootScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA30A52C065B5500BC5F1C /* RootScreenModel.swift */; };
 		D2AA30A92C06808400BC5F1C /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA30A82C06808400BC5F1C /* UserItem.swift */; };
@@ -80,6 +82,8 @@
 		D24280812C03ABB5004DEB55 /* BubbleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTextView.swift; sourceTree = "<group>"; };
 		D24280832C03AC2F004DEB55 /* BubbleTailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTailView.swift; sourceTree = "<group>"; };
 		D24280862C03B1BE004DEB55 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		D28C902F2C08F6F300E2597C /* ChannelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItem.swift; sourceTree = "<group>"; };
+		D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabViewModel.swift; sourceTree = "<group>"; };
 		D2AA30A22C065B1400BC5F1C /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		D2AA30A52C065B5500BC5F1C /* RootScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenModel.swift; sourceTree = "<group>"; };
 		D2AA30A82C06808400BC5F1C /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItem.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 		D24280662C024871004DEB55 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
+				D2AA30BD2C08F5E200BC5F1C /* Model */,
 				D2AA30B12C06D8A700BC5F1C /* ViewModel */,
 				D24280672C02487A004DEB55 /* Views */,
 			);
@@ -352,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AA30B22C06D8DA00BC5F1C /* ChatPartnerPickerViewModel.swift */,
+				D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -362,6 +368,14 @@
 				D2AA30BB2C08288300BC5F1C /* UserService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D2AA30BD2C08F5E200BC5F1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D28C902F2C08F6F300E2597C /* ChannelItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D2CA7D452C004E370080E71F = {
@@ -493,6 +507,7 @@
 				D2AA30A92C06808400BC5F1C /* UserItem.swift in Sources */,
 				D24280842C03AC2F004DEB55 /* BubbleTailView.swift in Sources */,
 				D20ED0A02C04EB8E007F4D8A /* AuthHeaderView.swift in Sources */,
+				D28C90322C08FE4700E2597C /* ChannelTabViewModel.swift in Sources */,
 				D2AA30B72C07D27700BC5F1C /* SelectedChatPartnerView.swift in Sources */,
 				D20ED0AC2C052AC5007F4D8A /* AuthProvider.swift in Sources */,
 				D242806E2C02595E004DEB55 /* SettingsTabScreen.swift in Sources */,
@@ -501,6 +516,7 @@
 				D242807B2C039F43004DEB55 /* MessageListController.swift in Sources */,
 				D242807D2C03A1EF004DEB55 /* MessageListView.swift in Sources */,
 				D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */,
+				D28C90302C08F6F300E2597C /* ChannelItem.swift in Sources */,
 				D2AA30AC2C0680FB00BC5F1C /* FirebaseConstants.swift in Sources */,
 				D20ED0A62C05181C007F4D8A /* SignUpScreen.swift in Sources */,
 				D2AA30B52C07967900BC5F1C /* GroupPartnerPickerScreen.swift in Sources */,
