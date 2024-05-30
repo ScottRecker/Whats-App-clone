@@ -59,7 +59,7 @@ final class AuthManager: AuthProvider {
             fetchCurrentUserInfo()
         }
     }
-    
+
     func login(with email: String, and password: String) async throws {
         do {
             let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
@@ -70,7 +70,7 @@ final class AuthManager: AuthProvider {
             throw AuthError.emailLoginFailed(error.localizedDescription)
         }
     }
-    
+
     func createAccount(for username: String, with email: String, and password: String) async throws {
         // invoke firebase create account method: store the user in our firebase auth
         // store the new user info in our database
@@ -108,7 +108,7 @@ extension AuthManager {
             throw AuthError.failedToSaveUserInfo(error.localizedDescription)
         }
     }
-    
+
     private func fetchCurrentUserInfo() {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         FirebaseConstants.UserRef.child(currentUid).observe(.value) {[weak self] snapshot in
