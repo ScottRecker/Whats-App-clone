@@ -36,6 +36,7 @@
 		D24280822C03ABB5004DEB55 /* BubbleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280812C03ABB5004DEB55 /* BubbleTextView.swift */; };
 		D24280842C03AC2F004DEB55 /* BubbleTailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280832C03AC2F004DEB55 /* BubbleTailView.swift */; };
 		D24280872C03B1BE004DEB55 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280862C03B1BE004DEB55 /* CustomModifiers.swift */; };
+		D27645122C0A8AFA000A7818 /* MessageItems+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */; };
 		D28C90302C08F6F300E2597C /* ChannelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C902F2C08F6F300E2597C /* ChannelItem.swift */; };
 		D28C90322C08FE4700E2597C /* ChannelTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */; };
 		D28C90352C09098100E2597C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C90342C09098100E2597C /* String+Extension.swift */; };
@@ -83,6 +84,7 @@
 		D24280812C03ABB5004DEB55 /* BubbleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTextView.swift; sourceTree = "<group>"; };
 		D24280832C03AC2F004DEB55 /* BubbleTailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTailView.swift; sourceTree = "<group>"; };
 		D24280862C03B1BE004DEB55 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageItems+Types.swift"; sourceTree = "<group>"; };
 		D28C902F2C08F6F300E2597C /* ChannelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItem.swift; sourceTree = "<group>"; };
 		D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabViewModel.swift; sourceTree = "<group>"; };
 		D28C90342C09098100E2597C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				D242807F2C03AB1A004DEB55 /* MessageItem.swift */,
+				D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				D20ED09E2C04EAF4007F4D8A /* LoginScreen.swift in Sources */,
 				D24280702C025A08004DEB55 /* SettingsItemView.swift in Sources */,
 				D2AA30B02C06D0C100BC5F1C /* ChatPartnerRowView.swift in Sources */,
+				D27645122C0A8AFA000A7818 /* MessageItems+Types.swift in Sources */,
 				D242806C2C02544F004DEB55 /* ChannelItemView.swift in Sources */,
 				D20ED0A22C04EC80007F4D8A /* AuthTextField.swift in Sources */,
 				D24280822C03ABB5004DEB55 /* BubbleTextView.swift in Sources */,

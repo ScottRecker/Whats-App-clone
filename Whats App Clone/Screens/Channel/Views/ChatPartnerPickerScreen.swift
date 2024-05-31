@@ -11,6 +11,7 @@ struct ChatPartnerPickerScreen: View {
     @State private var searchText = ""
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = ChatPartnerPickerViewModel()
+
     var onCreate: (_ newChannel: ChannelItem) -> Void
 
     var body: some View {
@@ -27,14 +28,7 @@ struct ChatPartnerPickerScreen: View {
                     ForEach(viewModel.users) { user in
                         ChatPartnerRowView(user: user)
                             .onTapGesture {
-                                viewModel.selectedChatPartners.append(user)
-                                let createChannel = viewModel.createChannel(nil)
-                                switch createChannel {
-                                case .success(let channelItem):
-                                    onCreate(channelItem)
-                                case .failure(let error):
-                                    print("failed to create channel: \(error.localizedDescription)")
-                                }
+                                viewModel.createDirectChannel(user, completion: onCreate)
                             }
                     }
                 } header: {
@@ -59,6 +53,9 @@ struct ChatPartnerPickerScreen: View {
             .toolbar {
                 trailingNavItem()
             }
+            .onAppear {
+                viewModel.deselectAllChatPartners()
+            }
         }
     }
 
@@ -79,7 +76,7 @@ extension ChatPartnerPickerScreen {
         case .groupPartnerPicker:
             GroupPartnerPickerScreen(viewModel: viewModel)
         case .setupGroupChat:
-            NewGroupSetupScreen(viewModel: viewModel)
+            NewGroupSetupScreen(viewModel: viewModel, onCreate: onCreate)
         }
 
     }
@@ -159,6 +156,6 @@ enum ChatPartnerPickerOptions: String, CaseIterable, Identifiable {
 
 #Preview {
     ChatPartnerPickerScreen { channel in
-        
+
     }
 }
