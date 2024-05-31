@@ -41,6 +41,10 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         print("🛠️ is paginatable: \(!users.isEmpty)")
         return !users.isEmpty
     }
+    
+    var isDirectChannel: Bool {
+        return selectedChatPartners.count == 1
+    }
 
     init() {
         Task {
@@ -84,6 +88,8 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         return .success(.placeholder)
     }
 
+    // MARK: - Keeping an index specific to user belongs to
+
     func createChannel(_ channelName: String?) -> Result<ChannelItem, Error> {
         guard !selectedChatPartners.isEmpty else { return .failure(ChannelCreationError.noChatPartner)}
         guard let channelId = FirebaseConstants.ChannelsRef.childByAutoId().key,
@@ -115,11 +121,20 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         membersUids.forEach { userId in
             /// keeping an index of the channel that a specific user belongs to
             FirebaseConstants.UserChannelsRef.child(userId).child(channelId).setValue(true)
-            /// Makes sure that a direct channel is unique
-            FirebaseConstants.UserDirectChannels.child(userId).child(channelId).setValue(true)
+            /// Makes sure that a `direct channelId` channel is unique
+//            FirebaseConstants.UserDirectChannels.child(userId).child(channelId).setValue(true)
         }
 
-        let newChannelItem = ChannelItem(channelDict)
+        /// Makes sure that a direct channel is unique
+        if isDirectChannel {
+            let chatPartner = selectedChatPartners[0]
+            /// User-direct-channels/uid/uid-channelId
+            FirebaseConstants.UserDirectChannels.child(currentUid).child(chatPartner.uid).setValue([channelId: true])
+            FirebaseConstants.UserDirectChannels.child(chatPartner.uid).child(currentUid).setValue([channelId: true])
+        }
+
+        var newChannelItem = ChannelItem(channelDict)
+        newChannelItem.members = selectedChatPartners
         return .success(newChannelItem)
     }
 }

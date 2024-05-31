@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct ChannelItem: Identifiable {
 
@@ -23,14 +24,32 @@ struct ChannelItem: Identifiable {
     var isGroupChat: Bool {
         members.count > 2
     }
-    
+
+    var membersExcludingMe: [UserItem] {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return []}
+        return members.filter { $0.uid != currentUid }
+    }
+
+    var title: String {
+        if let name = name {
+            return name
+        }
+
+        if isGroupChat {
+            return "Group Chat"
+        } else {
+            return membersExcludingMe.first?.username ?? "Unknown"
+
+        }
+    }
+
     static let placeholder = ChannelItem(id: "1", lastMessage: "Hello world", creationDate: Date(), lastMessageTimeStamp: Date(), membersCount: 2, adminUids: [], membersUids: [], members: [])
 }
 
 extension ChannelItem {
     init(_ dict: [String: Any ]) {
         self.id = dict[.id] as? String ?? ""
-        self.name = dict[.name] as? String ?? ""
+        self.name = dict[.name] as? String? ?? nil
         self.lastMessage = dict[.lastMessage] as? String ?? ""
         let creationInterval = dict[.creationDate] as? Double ?? 0
         self.creationDate = Date(timeIntervalSince1970: creationInterval)

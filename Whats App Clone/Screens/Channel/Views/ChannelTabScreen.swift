@@ -17,7 +17,7 @@ struct ChannelTabScreen: View {
                 archivedButton()
                 ForEach(0..<3) { _ in
                     NavigationLink {
-                        ChatRoomScreen()
+                        ChatRoomScreen(channel: .placeholder)
                     } label: {
                         ChannelItemView()
                     }
@@ -37,7 +37,7 @@ struct ChannelTabScreen: View {
             }
             .navigationDestination(isPresented: $viewModel.navigateToChatRoom) {
                 if let newChannel = viewModel.newChannel {
-                    ChatRoomScreen()
+                    ChatRoomScreen(channel: newChannel)
                 }
             }
         }
