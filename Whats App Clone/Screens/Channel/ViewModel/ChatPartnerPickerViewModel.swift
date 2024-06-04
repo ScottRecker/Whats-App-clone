@@ -43,7 +43,7 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     }
     
     var isPaginatable: Bool {
-        logger.debug("🛠️ is paginatable: \(!self.users.isEmpty)")
+//        logger.debug("🛠️ is paginatable: \(!self.users.isEmpty)")
         return !users.isEmpty
     }
     
@@ -67,7 +67,7 @@ final class ChatPartnerPickerViewModel: ObservableObject {
             fetchedUsers = fetchedUsers.filter { $0.uid != currentUid }
             self.users.append(contentsOf: fetchedUsers)
             self.lastCursor = userNode.currentCursor
-            logger.debug("lastCursor: \(self.lastCursor ?? "") \(self.users.count)")
+//            logger.debug("lastCursor: \(self.lastCursor ?? "") \(self.users.count)")
         } catch {
             logger.error("💿 Failed to fetch users in ChatPartnerPickerViewModel")
         }
