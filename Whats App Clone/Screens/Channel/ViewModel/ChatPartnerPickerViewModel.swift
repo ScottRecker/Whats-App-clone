@@ -28,6 +28,8 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     @Published var navStack = [ChannelCreationRoute]()
     @Published var selectedChatPartners = [UserItem]()
     @Published private(set) var users = [UserItem]()
+    @Published var errorState: (showError: Bool, errorMessage: String) = (false, "Uh-oh")
+    
     let logger = Logger(subsystem: "com.recker.Whats-App-Clone", category: "ChatPartnerPickerViewModel")
 
     private var lastCursor: String?
@@ -83,7 +85,11 @@ final class ChatPartnerPickerViewModel: ObservableObject {
             guard let index = selectedChatPartners.firstIndex(where: { $0.uid == item.uid }) else { return }
             selectedChatPartners.remove(at: index)
         } else {
-            // select
+            guard selectedChatPartners.count < ChannelConstats.maxGroupParcitipants else {
+               let errorMessage = "Sorry, We only allow a maximum of \(ChannelConstats.maxGroupParcitipants) participants in a group chat."
+                showError(errorMessage)
+                return
+            }
             selectedChatPartners.append(item)
         }
     }
@@ -99,15 +105,40 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     
     func createDirectChannel(_ chatPartner: UserItem, completion: @escaping (_ newChannel: ChannelItem) -> Void) {
         selectedChatPartners.append(chatPartner)
-        let channelCreation = createChannel()
-        switch channelCreation {
-        case .success(let channel):
-            completion(channel)
-        case .failure(let error):
-            print("Failed to create a Direct Channel: \(error.localizedDescription)")
+
+        Task {
+            // if existing DM, get the channel
+            if let channelId = await verifyIfDirectChannelExists(with: chatPartner.uid) {
+                let snapshot = try await FirebaseConstants.ChannelsRef.child(channelId).getData()
+                let channelDict = snapshot.value as! [String: Any]
+                var directChannel = ChannelItem(channelDict)
+                directChannel.members = selectedChatPartners
+                completion(directChannel)
+            } else {
+                // create a new DM with the user
+                let channelCreation = createChannel()
+                switch channelCreation {
+                case .success(let channel):
+                    completion(channel)
+                case .failure(let error):
+                    showError("Sorry! Something went wrong while we where trying to setup your Chat.")
+                    logger.debug("Failed to create a Direct Channel: \(error.localizedDescription)")
+                }
+            }
         }
     }
 
+    typealias ChannelId = String
+    private func verifyIfDirectChannelExists(with chatPartnerId: String) async -> ChannelId? {
+        guard let currentUid = Auth.auth().currentUser?.uid,
+              let snapshot = try? await FirebaseConstants.UserDirectChannels.child(currentUid).child(chatPartnerId).getData(),
+              snapshot.exists()
+        else { return nil }
+
+        let directMessageDict = snapshot.value as! [String: Bool]
+        let channelId = directMessageDict.compactMap { $0.key }.first
+        return channelId
+    }
 
     func createGroupChannel(_ groupName: String?, completion: @escaping (_ newChannel: ChannelItem) -> Void) {
         let channelCreation = createChannel(groupName)
@@ -115,8 +146,14 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         case .success(let channel):
             completion(channel)
         case .failure(let error):
-            print("Failed to create a Group Channel: \(error.localizedDescription)")
+            showError("Sorry! Something went wrong while we where trying to setup your Group Chat.")
+            logger.debug("Failed to create a Group Channel: \(error.localizedDescription)")
         }
+    }
+
+    private func showError(_ errorMessage: String) {
+        errorState.errorMessage = errorMessage
+        errorState.showError = true
     }
 
     private func createChannel(_ channelName: String? = nil) -> Result<ChannelItem, Error> {
