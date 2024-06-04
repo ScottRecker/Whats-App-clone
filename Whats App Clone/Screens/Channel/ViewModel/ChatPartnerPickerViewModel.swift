@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import OSLog
 
 enum ChannelCreationRoute {
     case groupPartnerPicker
@@ -27,6 +28,8 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     @Published var navStack = [ChannelCreationRoute]()
     @Published var selectedChatPartners = [UserItem]()
     @Published private(set) var users = [UserItem]()
+    let logger = Logger(subsystem: "com.recker.Whats-App-Clone", category: "ChatPartnerPickerViewModel")
+
     private var lastCursor: String?
 
     var showSelectedUsers: Bool {
@@ -38,7 +41,7 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     }
     
     var isPaginatable: Bool {
-        print("🛠️ is paginatable: \(!users.isEmpty)")
+        logger.debug("🛠️ is paginatable: \(!self.users.isEmpty)")
         return !users.isEmpty
     }
     
@@ -62,9 +65,9 @@ final class ChatPartnerPickerViewModel: ObservableObject {
             fetchedUsers = fetchedUsers.filter { $0.uid != currentUid }
             self.users.append(contentsOf: fetchedUsers)
             self.lastCursor = userNode.currentCursor
-            print("lastCursor: \(lastCursor ?? "") \(users.count)")
+            logger.debug("lastCursor: \(self.lastCursor ?? "") \(self.users.count)")
         } catch {
-            print("💿 Failed to fetch users in ChatPartnerPickerViewModel")
+            logger.error("💿 Failed to fetch users in ChatPartnerPickerViewModel")
         }
     }
     
@@ -118,6 +121,7 @@ final class ChatPartnerPickerViewModel: ObservableObject {
 
     private func createChannel(_ channelName: String? = nil) -> Result<ChannelItem, Error> {
         guard !selectedChatPartners.isEmpty else { return .failure(ChannelCreationError.noChatPartner)}
+
         guard let channelId = FirebaseConstants.ChannelsRef.childByAutoId().key,
               let currentUid = Auth.auth().currentUser?.uid,
               let messageId = FirebaseConstants.MessagesRef.childByAutoId().key
