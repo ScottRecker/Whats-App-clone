@@ -36,6 +36,7 @@
 		D24280822C03ABB5004DEB55 /* BubbleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280812C03ABB5004DEB55 /* BubbleTextView.swift */; };
 		D24280842C03AC2F004DEB55 /* BubbleTailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280832C03AC2F004DEB55 /* BubbleTailView.swift */; };
 		D24280872C03B1BE004DEB55 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24280862C03B1BE004DEB55 /* CustomModifiers.swift */; };
+		D24F6C2A2C1F89A200F09D00 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F6C292C1F89A200F09D00 /* MessageService.swift */; };
 		D27645122C0A8AFA000A7818 /* MessageItems+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */; };
 		D28C90302C08F6F300E2597C /* ChannelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C902F2C08F6F300E2597C /* ChannelItem.swift */; };
 		D28C90322C08FE4700E2597C /* ChannelTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */; };
@@ -84,6 +85,7 @@
 		D24280812C03ABB5004DEB55 /* BubbleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTextView.swift; sourceTree = "<group>"; };
 		D24280832C03AC2F004DEB55 /* BubbleTailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTailView.swift; sourceTree = "<group>"; };
 		D24280862C03B1BE004DEB55 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		D24F6C292C1F89A200F09D00 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageItems+Types.swift"; sourceTree = "<group>"; };
 		D28C902F2C08F6F300E2597C /* ChannelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItem.swift; sourceTree = "<group>"; };
 		D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabViewModel.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AA30BB2C08288300BC5F1C /* UserService.swift */,
+				D24F6C292C1F89A200F09D00 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				D242807B2C039F43004DEB55 /* MessageListController.swift in Sources */,
 				D242807D2C03A1EF004DEB55 /* MessageListView.swift in Sources */,
 				D242806A2C024DDA004DEB55 /* ChannelTabScreen.swift in Sources */,
+				D24F6C2A2C1F89A200F09D00 /* MessageService.swift in Sources */,
 				D28C90302C08F6F300E2597C /* ChannelItem.swift in Sources */,
 				D2AA30AC2C0680FB00BC5F1C /* FirebaseConstants.swift in Sources */,
 				D20ED0A62C05181C007F4D8A /* SignUpScreen.swift in Sources */,
