@@ -39,6 +39,7 @@
 		D24F6C282C1F4FF900F09D00 /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F6C272C1F4FF900F09D00 /* ChatRoomViewModel.swift */; };
 		D24F6C2A2C1F89A200F09D00 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F6C292C1F89A200F09D00 /* MessageService.swift */; };
 		D24F6C2C2C23704E00F09D00 /* ChannelCreationTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F6C2B2C23704E00F09D00 /* ChannelCreationTextView.swift */; };
+		D24F6C2E2C2398C200F09D00 /* AdminMessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F6C2D2C2398C200F09D00 /* AdminMessageTextView.swift */; };
 		D27645122C0A8AFA000A7818 /* MessageItems+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */; };
 		D28C90302C08F6F300E2597C /* ChannelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C902F2C08F6F300E2597C /* ChannelItem.swift */; };
 		D28C90322C08FE4700E2597C /* ChannelTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */; };
@@ -90,6 +91,7 @@
 		D24F6C272C1F4FF900F09D00 /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
 		D24F6C292C1F89A200F09D00 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		D24F6C2B2C23704E00F09D00 /* ChannelCreationTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCreationTextView.swift; sourceTree = "<group>"; };
+		D24F6C2D2C2398C200F09D00 /* AdminMessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMessageTextView.swift; sourceTree = "<group>"; };
 		D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageItems+Types.swift"; sourceTree = "<group>"; };
 		D28C902F2C08F6F300E2597C /* ChannelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItem.swift; sourceTree = "<group>"; };
 		D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabViewModel.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				D20ED08C2C04136D007F4D8A /* BubbleAudioView.swift */,
 				D20ED08A2C03C161007F4D8A /* BubbleImageView.swift */,
 				D24F6C2B2C23704E00F09D00 /* ChannelCreationTextView.swift */,
+				D24F6C2D2C2398C200F09D00 /* AdminMessageTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				D20ED0AC2C052AC5007F4D8A /* AuthProvider.swift in Sources */,
 				D242806E2C02595E004DEB55 /* SettingsTabScreen.swift in Sources */,
 				D24280642C02485A004DEB55 /* CommunityTabScreen.swift in Sources */,
+				D24F6C2E2C2398C200F09D00 /* AdminMessageTextView.swift in Sources */,
 				D2AA30A62C065B5500BC5F1C /* RootScreenModel.swift in Sources */,
 				D242807B2C039F43004DEB55 /* MessageListController.swift in Sources */,
 				D242807D2C03A1EF004DEB55 /* MessageListView.swift in Sources */,
