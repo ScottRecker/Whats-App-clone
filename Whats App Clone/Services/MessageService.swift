@@ -32,4 +32,18 @@ struct MessageService {
         onComplete()
     }
 
+    static func getMessages(for channel: ChannelItem, completion: @escaping ([MessageItem]) -> Void) {
+        FirebaseConstants.MessagesRef.child(channel.id).observe(.value) { snapshot in
+            var messages: [MessageItem] = []
+            guard let dict = snapshot.value as? [String: Any] else { return }
+            dict.forEach { key, value in
+                let messageDict = value as? [String: Any] ?? [:]
+                let message = MessageItem(id: key, dict: messageDict)
+                messages.append(message)
+                completion(messages)
+            }
+        } withCancel: { error in
+            print("Failed to get messages for \(channel.title)")
+        }
+    }
 }
