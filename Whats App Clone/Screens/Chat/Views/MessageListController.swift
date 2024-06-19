@@ -99,6 +99,13 @@ extension MessageListController: UITableViewDelegate, UITableViewDataSource {
                 BubbleImageView(item: message)
             case .audio:
                 BubbleAudioView(item: message)
+            case .admin(let adminType):
+                switch adminType {
+                case .channelCreation:
+                    ChannelCreationTextView()
+                default:
+                    Text("ADMIN TEXT")
+                }
             }
         }
         return cell
