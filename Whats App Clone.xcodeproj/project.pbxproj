@@ -41,6 +41,7 @@
 		D24F6C2C2C23704E00F09D00 /* ChannelCreationTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F6C2B2C23704E00F09D00 /* ChannelCreationTextView.swift */; };
 		D24F6C2E2C2398C200F09D00 /* AdminMessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F6C2D2C2398C200F09D00 /* AdminMessageTextView.swift */; };
 		D24F6C312C23A1A800F09D00 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D24F6C302C23A1A800F09D00 /* Kingfisher */; };
+		D24F6C342C23A20200F09D00 /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F6C332C23A20200F09D00 /* CircularProfileImageView.swift */; };
 		D27645122C0A8AFA000A7818 /* MessageItems+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */; };
 		D28C90302C08F6F300E2597C /* ChannelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C902F2C08F6F300E2597C /* ChannelItem.swift */; };
 		D28C90322C08FE4700E2597C /* ChannelTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */; };
@@ -93,6 +94,7 @@
 		D24F6C292C1F89A200F09D00 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		D24F6C2B2C23704E00F09D00 /* ChannelCreationTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCreationTextView.swift; sourceTree = "<group>"; };
 		D24F6C2D2C2398C200F09D00 /* AdminMessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMessageTextView.swift; sourceTree = "<group>"; };
+		D24F6C332C23A20200F09D00 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		D27645112C0A8AFA000A7818 /* MessageItems+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageItems+Types.swift"; sourceTree = "<group>"; };
 		D28C902F2C08F6F300E2597C /* ChannelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItem.swift; sourceTree = "<group>"; };
 		D28C90312C08FE4700E2597C /* ChannelTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabViewModel.swift; sourceTree = "<group>"; };
@@ -338,6 +340,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D24F6C322C23A1D200F09D00 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D24F6C332C23A20200F09D00 /* CircularProfileImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D28C90332C09096800E2597C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +442,7 @@
 		D2CA7D502C004E370080E71F /* Whats App Clone */ = {
 			isa = PBXGroup;
 			children = (
+				D24F6C322C23A1D200F09D00 /* Components */,
 				D28C90332C09096800E2597C /* Extensions */,
 				D2AA30BA2C08286200BC5F1C /* Services */,
 				D2AA30AA2C0680E000BC5F1C /* Utils */,
@@ -540,6 +551,7 @@
 				D2AA30A32C065B1400BC5F1C /* RootScreen.swift in Sources */,
 				D2CA7E082C0116630080E71F /* UpdatesTabScreen.swift in Sources */,
 				D20ED0A92C051C40007F4D8A /* AuthScreenModel.swift in Sources */,
+				D24F6C342C23A20200F09D00 /* CircularProfileImageView.swift in Sources */,
 				D20ED0A42C04F25B007F4D8A /* AuthButton.swift in Sources */,
 				D2CA7E0C2C0168BE0080E71F /* CallsTabScreen.swift in Sources */,
 				D2AA30A92C06808400BC5F1C /* UserItem.swift in Sources */,
