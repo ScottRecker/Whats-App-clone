@@ -34,13 +34,21 @@ struct ChatRoomScreen: View {
 
 // MARK: Toolbar Items
 extension ChatRoomScreen {
+    // TODO: Change this to be more dynamic
+    private var channelTitle: String {
+        let maxCount = 20
+        let trailingChars = channel.title.count > maxCount ? "..." : ""
+        let title = String(channel.title.prefix(maxCount) + trailingChars)
+        return title
+    }
+
     @ToolbarContentBuilder
     private func leadingNavItems() -> some ToolbarContent {
         ToolbarItem(placement: .topBarLeading) {
             HStack {
-                Circle()
-                    .frame(width: 35, height: 30)
-                Text(channel.title)
+                CircularProfileImageView(channel, size: .mini)
+
+                Text(channelTitle)
                     .bold()
             }
         }
