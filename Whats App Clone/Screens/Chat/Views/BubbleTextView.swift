@@ -18,6 +18,7 @@ struct BubbleTextView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             .applyTail(item.direction)
             timeStampTextView()
+                .padding(.leading)
         }
         .shadow(color: Color(.systemGray3).opacity(0.1), radius: 5, x: 0, y: 20)
         .frame(maxWidth: .infinity, alignment: item.alignment)
@@ -27,7 +28,7 @@ struct BubbleTextView: View {
 
     private func timeStampTextView() -> some View {
         HStack {
-            Text("3:05 PM")
+            Text(item.timeStamp.formattedToTime)
                 .font(.system(size: 13))
                 .foregroundStyle(.gray)
             if item.direction == .sent {
