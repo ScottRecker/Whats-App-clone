@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import OSLog
+import Combine
 
 enum ChannelCreationRoute {
     case groupPartnerPicker
@@ -30,9 +31,12 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     @Published private(set) var users = [UserItem]()
     @Published var errorState: (showError: Bool, errorMessage: String) = (false, "Uh-oh")
     
+    private var subscription: AnyCancellable?
+
     let logger = Logger(subsystem: "com.recker.Whats-App-Clone", category: "ChatPartnerPickerViewModel")
 
     private var lastCursor: String?
+    private var currentUser: UserItem?
 
     var showSelectedUsers: Bool {
         return !selectedChatPartners.isEmpty
@@ -52,8 +56,23 @@ final class ChatPartnerPickerViewModel: ObservableObject {
     }
 
     init() {
-        Task {
-            await fetchUsers()
+        listenForAuthState()
+    }
+
+    deinit {
+        subscription?.cancel()
+        subscription = nil
+    }
+
+    private func listenForAuthState() {
+        subscription = AuthManager.shared.authState.receive(on: DispatchQueue.main).sink { [weak self] authState in
+            switch authState {
+            case .loggedIn(let loggedInUser):
+                self?.currentUser = loggedInUser
+                Task { await self?.fetchUsers() }
+            default:
+                break
+            }
         }
     }
 
@@ -113,6 +132,9 @@ final class ChatPartnerPickerViewModel: ObservableObject {
                 let channelDict = snapshot.value as! [String: Any]
                 var directChannel = ChannelItem(channelDict)
                 directChannel.members = selectedChatPartners
+                if let currentUser {
+                    directChannel.members.append(currentUser)
+                }
                 completion(directChannel)
             } else {
                 // create a new DM with the user
@@ -193,8 +215,6 @@ final class ChatPartnerPickerViewModel: ObservableObject {
         membersUids.forEach { userId in
             /// keeping an index of the channel that a specific user belongs to
             FirebaseConstants.UserChannelsRef.child(userId).child(channelId).setValue(true)
-            /// Makes sure that a `direct channelId` channel is unique
-//            FirebaseConstants.UserDirectChannels.child(userId).child(channelId).setValue(true)
         }
 
         /// Makes sure that a direct channel is unique
@@ -207,6 +227,9 @@ final class ChatPartnerPickerViewModel: ObservableObject {
 
         var newChannelItem = ChannelItem(channelDict)
         newChannelItem.members = selectedChatPartners
+        if let currentUser {
+            newChannelItem.members.append(currentUser)
+        }
         return .success(newChannelItem)
     }
 }

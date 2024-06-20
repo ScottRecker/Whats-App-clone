@@ -23,8 +23,10 @@ final class ChannelTabViewModel: ObservableObject {
     @Published var channelDictionary: [ChannelId: ChannelItem] = [:]
 
     let logger = Logger(subsystem: "com.recker.Whats-App-Clone", category: "ChannelTabViewModel")
-    
-    init() {
+    private let currentUser: UserItem
+
+    init(_ currentUser: UserItem) {
+        self.currentUser = currentUser
         fetchCurrentUserChannels()
     }
 
@@ -49,14 +51,17 @@ final class ChannelTabViewModel: ObservableObject {
 
     private func getChannel(with channelId: String) {
         FirebaseConstants.ChannelsRef.child(channelId).observe(.value) { [weak self] snapshot in
-            guard let dict = snapshot.value as? [String: Any] else { return }
+            guard let dict = snapshot.value as? [String: Any], let self = self else { return }
             var channel = ChannelItem(dict)
-            self?.getChannelMembers(channel) { members in
+            self.getChannelMembers(channel) { members in
                 channel.members = members
-                self?.channelDictionary[channelId] = channel
-                self?.reloadData()
-//                self?.channels.append(channel)
-                self?.logger.debug("channel: \(channel.title)")
+                if channel.isGroupChat == false {
+                    channel.members.append(self.currentUser)
+                }
+                self.channelDictionary[channelId] = channel
+                self.reloadData()
+//                self.channels.append(channel)
+                self.logger.debug("channel: \(channel.title)")
             }
         } withCancel: { [weak self] error in
             self?.logger.error("Failed to get the channel for id \(channelId): \(error.localizedDescription)")
